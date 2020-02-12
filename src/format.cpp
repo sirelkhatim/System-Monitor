@@ -5,20 +5,21 @@
 
 using std::string;
 
-// TODO: Complete this helper function
 // INPUT: Long int measuring seconds
 // OUTPUT: HH:MM:SS
-// REMOVE: [[maybe_unused]] once you define the function
+
 string Format::ElapsedTime(long seconds) { 
 
 	long lhours = seconds % 60;
 	long lminutes = (seconds / 60) % 60;
-	long lseconds = seconds % 3600;
+	long lseconds = seconds / 3600;
 
 	std::stringstream ssresult;
-	ssresult << std::setfill('0') << std::setw(2) << lhours << ":";
+	//format hours, minutes, and seconds to HH:MM:SS
+	ssresult << std::setfill('0') << std::setw(2) << lseconds << ":";
 	ssresult << std::setfill('0') << std::setw(2) << lminutes << ":";
-	ssresult << std::setfill('0') << std::setw(2) << lseconds;
+	ssresult << std::setfill('0') << std::setw(2) << lhours;
+
 
 	return ssresult.str();
  }

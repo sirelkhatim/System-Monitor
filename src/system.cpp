@@ -19,10 +19,10 @@ System::System(){
 	cpu_ = Processor();
 	Processes();
 }
-// TODO: Return the system's CPU
+// Return the system's CPU
 Processor& System::Cpu() { return cpu_; }
 
-// TODO: Return a container composed of the system's processes
+// Return a container composed of the system's processes
 vector<Process>& System::Processes() { 
 
 processes_.clear();

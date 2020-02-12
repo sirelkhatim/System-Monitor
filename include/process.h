@@ -20,7 +20,7 @@ class Process {
   bool operator>(Process const& a) const;
   Process(int pid);
 
-  // TODO: Declare any necessary private members
+  // Declare any necessary private members
  private:
  	int pid_;
  	float cpu_=0;

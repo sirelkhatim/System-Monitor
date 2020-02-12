@@ -1,6 +1,6 @@
 #include "processor.h"
 #include "linux_parser.h"
-// TODO: Return the aggregate CPU utilization
+// Return the aggregate CPU utilization
 Processor::Processor(){
 	jAll_ = LinuxParser::Jiffies();
 	jIdle_ = LinuxParser::IdleJiffies();
